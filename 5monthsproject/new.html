@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Access</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1.jpeg'); /* Replace 'background.jpg' with your desired background image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #passwordInput {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        #submitButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to Secure Access</h1>
+    <img src="C:\Users\IT_03\Desktop\5monthsproject\51Cn0EIi3CS._AC_SL1100_.jpg" alt="Photo" id="photo" onclick="showPasswordBox()">
+    <div id="passwordBox" style="display: none;">
+        <input type="password" id="passwordInput" placeholder="Enter password">
+        <button id="submitButton" onclick="checkPassword()">Submit</button>
+    </div>
+</div>
+
+<script>
+    function showPasswordBox() {
+        document.getElementById("passwordBox").style.display = "block";
+    }
+
+    function checkPassword() {
+    var password = document.getElementById("passwordInput").value;
+    // Replace 'your_password' with your actual password
+    if (password === "112024") {
+        window.location.href = "file:///C:/Users/IT_03/Desktop/5monthsproject/insert.html";
+    } else {
+        alert("Incorrect password. Please try again.");
+    }
+}
+</script>
+
+</body>
+</html>
